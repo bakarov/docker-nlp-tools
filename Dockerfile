@@ -3,6 +3,7 @@ FROM ubuntu:bionic
 MAINTAINER Amir Bakarov
 
 RUN apt clean && apt update
+RUN apt install software-properties-common
 
 COPY packages.txt /packages.txt
 RUN cat packages.txt | xargs apt install -y
