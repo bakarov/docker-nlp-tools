@@ -1,5 +1,1 @@
--c conda-forge tensorflow 
--c conda-forge keras
-pytorch-cpu torchvision-cpu -c pytorch
--c anaconda nltk 
--c conda-forge spacy
+spacy

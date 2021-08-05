@@ -1,6 +1,7 @@
-python
 wget
 bzip2
 vim
 ranger
-mc
+curl
+cmake
+git
