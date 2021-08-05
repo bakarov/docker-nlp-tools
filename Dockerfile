@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu
 
 MAINTAINER Amir Bakarov
 
@@ -8,9 +8,9 @@ RUN apt install software-properties-common
 COPY packages.txt /packages.txt
 RUN cat packages.txt | xargs apt install -y
 
-RUN wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
-RUN bash Anaconda3-5.2.0-Linux-x86_64.sh -b -p ~/anaconda
-RUN rm Anaconda3-5.2.0-Linux-x86_64.sh
+RUN wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+RUN bash Anaconda3-2021.05-Linux-x86_64.sh -b -p ~/anaconda
+RUN rm Anaconda3-2021.05-Linux-x86_64.sh
 RUN echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
 
 EXPOSE 8888
